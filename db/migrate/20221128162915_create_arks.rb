@@ -6,9 +6,6 @@ class CreateArks < ActiveRecord::Migration[7.0]
       t.string :description
       t.references :category, null: false, foreign_key: true
       t.references :artist, null: false, foreign_key: true
-      t.references :material, null: false, foreign_key: true
-      t.references :style, null: false, foreign_key: true
-
       t.timestamps
     end
   end

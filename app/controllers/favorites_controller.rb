@@ -6,14 +6,9 @@ class FavoritesController < ApplicationController
 
   def create
     @favorite.user = current_user
-    if @favorite.save
-      redirect_to favorite_path(@favorite)
-    else
-      render 'arks/show'
-    end
+    @favorite.ark = @ark
+    @favorite.save
   end
-
-  private
 
   def destroy
     @favorite.destroy
