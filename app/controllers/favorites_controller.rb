@@ -1,7 +1,6 @@
 class FavoritesController < ApplicationController
   # représente le portfolio
   def index
-
     @favorites = Favorite.all
   end
 

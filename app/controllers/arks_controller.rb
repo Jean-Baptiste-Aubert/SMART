@@ -1,5 +1,5 @@
 class ArksController < ApplicationController
-  # représente toute les arks 
+  # représente toute les arks
 
   def index
     @arks = Ark.all

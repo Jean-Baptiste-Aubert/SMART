@@ -1,1 +1,116 @@
 // Specific CSS for your home-page
+.try {
+  background-color: #EEEEEE;
+  overflow-x: hidden;
+}
+.bansky {
+  background-color: #EEEEEE;
+  overflow-x: hidden;
+}
+.bansky img {
+  width: 75%;
+  margin: 15%;
+  box-shadow: 5px 5px 5px 5px #DDDDDD;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.jour h1 {
+  text-align: left;
+  color: #AAAAAA;
+  font-size: 24px;
+  margin-left: 110px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-decoration-line: overline;
+}
+
+.descrip p {
+  margin-left: 110px;
+  margin-right: 110px;
+}
+.descrip h2 {
+  margin-left: 110px;
+  margin-bottom: 10px;
+}
+
+.descrip h5 {
+  margin-left: 110px;
+  margin-bottom: 30px;
+}
+
+.icons {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-left: 50px;
+  color: #AAAAAA;
+}
+
+.heart {
+  font-size: 24px;
+  text-align: right;
+  margin-right: 100px;
+  margin-bottom: 0px;
+  color: #AAAAAA;
+  :hover {
+    color: #F25287;
+  }
+}
+
+.site a, .para {
+  color: #696161b8;
+  text-align: right;
+  margin-right: 15px;
+  margin-top: 40px;
+}
+
+.jour h6 {
+  text-align: right;
+  margin-right: 30px;
+  color: #AAAAAA;
+  margin-top: 30px;
+  text-shadow: 10px 10px 5px 5px #696161b8;
+}
+
+
+
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
