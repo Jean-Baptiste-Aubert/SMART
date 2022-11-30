@@ -9,7 +9,7 @@ class PagesController < ApplicationController
     
     @ark = Ark.find(params[id])
     if params[:user].present?
-      redirect_to root_path
+      # redirect_to root_path
     else
       @user == current_user
     end
