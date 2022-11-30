@@ -1,2 +1,8 @@
 <h1>Favorites#destroy</h1>
 <p>Find me in app/views/favorites/destroy.html.erb</p>
+<% if current_user == @user %>
+      <%= link_to "Supprimer de mes favorits", favorite_path(@favorite, class:"btn btn-link text-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <% end %>
+    </div>
+  <%= link_to "Retour", ark_path, class:"btn btn-success"%>
+  </div>
