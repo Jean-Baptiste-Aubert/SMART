@@ -1,0 +1,28 @@
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.image-preferences {
+  height: 180px;
+  width: 180px;
+  border-radius: 8px;
+  padding: 2px;
+  object-fit: cover;
+}
+input[type="checkbox"]:checked + label img {
+  border: 3px solid rgb(0, 179, 255);
+}
+
+.container-choose {
+  margin-top: 25vh;
+  margin-left: 15vw
+}
+
+.container-choose h2 {
+  color: rgb(42, 42, 42);
+}
+
+.container-choose p {
+  color: rgb(42, 42, 42);
+}

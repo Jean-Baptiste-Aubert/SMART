@@ -1,5 +1,6 @@
 class ArksController < ApplicationController
   # représente toute les arks
+  before_action :authenticate_user!, only: [:daily_show]
 
   def related_arks
     @ark = Ark.find(params[:id])
@@ -21,11 +22,11 @@ class ArksController < ApplicationController
   end
 
   def daily_show
-    @ark = Ark.new.rand if Ark.date.include?(current_user.preference)
+    # @ark = Ark.new.rand if Ark.date.include?(current_user.preference)
   end
 
   def show
-    @ark = Ark.find(params:[id])
+    @ark = Ark.find(params: [id])
   end
 
   def unlike

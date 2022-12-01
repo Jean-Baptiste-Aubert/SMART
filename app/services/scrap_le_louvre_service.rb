@@ -59,6 +59,7 @@ require "json"
 # #   end
 # end
 
+
 class ScrapLeLouvreService
   BASE_URL = "https://collections.louvre.fr".freeze
 
@@ -83,7 +84,7 @@ class ScrapLeLouvreService
 
   def parse_html(url)
     html_file = URI(url).read
-    html_doc = Nokogiri::HTML(html_file)
+    Nokogiri::HTML(html_file)
   end
 
   def get_data(paths)
