@@ -2,8 +2,11 @@ class UsersController < ApplicationController
   # represente le profil de l'utilisateur
 
   before_action :set_user, only: [:show]
+
   def show
-    preference = []
+  end
+
+  def choose
   end
 
   private
@@ -11,4 +14,6 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
+
+
 end

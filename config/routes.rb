@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: "pages#home"
+  devise_for :users, controllers: { registrations: "registrations" }
+  root to: "arks#daily_show"
+
+  get "choose_preferences", to: "users#choose"
 
   get 'user', to: 'users#index'
   resources :arks, only: [:index, :show] do
