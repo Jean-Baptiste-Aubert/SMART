@@ -59,8 +59,13 @@ require "json"
 # #   end
 # end
 
+
 class ScrapLeLouvreService
   BASE_URL = "https://collections.louvre.fr".freeze
+
+  def initialize
+    Ark.destroy_all if Rails.env.development?
+  end
 
   def call
     514.times do |page_number|
@@ -79,7 +84,7 @@ class ScrapLeLouvreService
 
   def parse_html(url)
     html_file = URI(url).read
-    html_doc = Nokogiri::HTML(html_file)
+    Nokogiri::HTML(html_file)
   end
 
   def get_data(paths)

@@ -4,9 +4,12 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show]
 
   def show
-  end
-
-  def choose
+    # preference = []
+    if params[:id]
+      @user = User.find(params[:id])
+    else
+      @user = current_user
+    end
   end
 
   private
@@ -15,5 +18,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
 end
