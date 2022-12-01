@@ -2,16 +2,44 @@
 
   <div>
     <h1>Dans le regard de l'artiste</h1>
-      <% @artist_arks.each do |artist_ark| %>
-        <img src= <%=artist_ark.image_url %> alt="images1">
+     <div class="artist" data-controller="caroussel">
+
+      <% @artist_arks.first(3).each_with_index do |artist_ark, i| %>
+        <input data-caroussel-target="input" type="radio" name="slider" id="input-<%= i + 1%>">
       <% end %>
+
+
+      <div class="caroussel-artists">
+        <% @artist_arks.first(3).each_with_index do |artist_ark, i| %>
+          <label class="caroussel-artist" for="input-<%= i + 1%>" id="label-<%= i + 1 %>">
+            <img src=<%= artist_ark.image_url %>>
+          </label>
+        <% end %>
+
+      </div>
+    </div>
   </div>
   <br>
   <div>
     <h1>Dans la même période</h1>
-      <% @date_arks.first(9).each do |date_ark| %>
-        <img src= <%=date_ark.image_url%> alt="images2">
+
+    <div class="contain" data-controller="caroussel">
+
+      <% @date_arks.first(3).each_with_index do |date_ark, i| %>
+        <input data-caroussel-target="input" type="radio" name="slider" id="input-<%= i + 1%>">
       <% end %>
+
+
+      <div class="caroussel-cards">
+        <% @date_arks.first(3).each_with_index do |date_ark, i| %>
+          <label class="caroussel-card" for="input-<%= i + 1%>" id="label-<%= i + 1 %>">
+            <img src=<%= date_ark.image_url %>>
+          </label>
+        <% end %>
+
+      </div>
+    </div>
+
   </div>
 
 </div>

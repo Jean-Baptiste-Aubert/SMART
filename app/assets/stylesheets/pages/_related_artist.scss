@@ -8,7 +8,7 @@ body {
   padding: 30px 10px;
   font-family: 'DM Sans', sans-serif;
   transition: background .4s ease-in;
-  background-color: #C394F8;
+  background-color: #d6cde0;
   &.blue {
     background-color: #428AA6;
   }
@@ -26,13 +26,13 @@ input[type=radio] {
   flex-direction: column;
   align-inputs: center;
 }
-.caroussel-cards {
+.caroussel-artists {
   position: relative;
   width: 400px;
   height: 300px;
   margin-bottom: 20px;
 }
-.caroussel-card {
+.caroussel-artist {
   position: absolute;
   width: 60%;
   height: 100%;
@@ -51,17 +51,17 @@ img {
 }
 
 
-#input-1:checked ~ .caroussel-cards #label-3, #input-2:checked ~ .caroussel-cards #label-1, #input-3:checked ~ .caroussel-cards #label-2 {
+#input-1:checked ~ .caroussel-artists #label-3, #input-2:checked ~ .caroussel-artists #label-1, #input-3:checked ~ .caroussel-artists #label-2 {
   transform: translatex(-40%) scale(.8);
   opacity: .4;
   z-index: 0;
 }
-#input-1:checked ~ .caroussel-cards #label-2, #input-2:checked ~ .caroussel-cards #label-3, #input-3:checked ~ .caroussel-cards #label-1 {
+#input-1:checked ~ .caroussel-artists #label-2, #input-2:checked ~ .caroussel-artists #label-3, #input-3:checked ~ .caroussel-artists #label-1 {
   transform: translatex(40%) scale(.8);
   opacity: .4;
   z-index: 0;
 }
-#input-1:checked ~ .caroussel-cards #label-1, #input-2:checked ~ .caroussel-cards #label-2, #input-3:checked ~ .caroussel-cards #label-3 {
+#input-1:checked ~ .caroussel-artists #label-1, #input-2:checked ~ .caroussel-artists #label-2, #input-3:checked ~ .caroussel-artists #label-3 {
   transform: translatex(0) scale(1);
   opacity: 1;
   z-index: 1;
