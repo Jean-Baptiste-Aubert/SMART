@@ -62,6 +62,10 @@ require "json"
 class ScrapLeLouvreService
   BASE_URL = "https://collections.louvre.fr".freeze
 
+  def initialize
+    Artist.destroy_all if Rails.env.development?
+  end
+
   def call
     514.times do |page_number|
       page_number += 30
@@ -100,7 +104,7 @@ class ScrapLeLouvreService
       birth_date = data.dig("creator", 0, "dates", 0, "date")
       death_date = data.dig("creator", 0, "dates", 1, "date")
 
-      artist = Artist.create(name: artist_name, birth_date: birth_date, death_date: death_date)
+      artist = Artist.find_or_create_by!(name: artist_name, birth_date: birth_date, death_date: death_date)
       category = Category.create(name: "peinture")
 
       Ark.create(name: name, date: date, description: description, artist: artist, category: category, image_url: image_url)

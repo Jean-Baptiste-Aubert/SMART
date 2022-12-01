@@ -1,0 +1,17 @@
+<div class="container">
+
+  <div>
+    <h1>Dans le regard de l'artiste</h1>
+      <% @artist_arks.each do |artist_ark| %>
+        <img src= <%=artist_ark.image_url %> alt="images1">
+      <% end %>
+  </div>
+  <br>
+  <div>
+    <h1>Dans la même période</h1>
+      <% @date_arks.first(9).each do |date_ark| %>
+        <img src= <%=date_ark.image_url%> alt="images2">
+      <% end %>
+  </div>
+
+</div>

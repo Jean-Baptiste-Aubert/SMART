@@ -1,5 +1,10 @@
-<h1>Favorites#index</h1>
-<p>Find me in app/views/favorites/index.html.erb</p>
+<img src="../assets/images/logo.svg" alt="logo"/>
 
-
-<h1>Mon portfolio</h1>
+<div class="container">
+  <h1>Mon musée personnel</h1>
+    <div class = "favorites_img">
+      <% @favorites.each |favorite| do : %>
+        <%= favorite.ark.image_url %>
+      <% end %>
+    </div>
+</div>

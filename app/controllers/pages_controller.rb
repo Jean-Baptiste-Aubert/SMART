@@ -6,8 +6,8 @@ class PagesController < ApplicationController
   end
 
   def show
-    
-    @ark = Ark.find(params[id])
+
+    @ark = Ark.find(params[:id])
     if params[:user].present?
       # redirect_to root_path
     else
