@@ -9,12 +9,8 @@ class ArksController < ApplicationController
     @arks = ArK.date.all
   end
 
-  def daily_show
-    @ark = Ark.new.rand if Ark.date.include?(current_user.preference)
-  end
-
   def show
-    @ark = Ark.find(params:[id])
+    @ark = Ark.find(params: [id])
   end
 
   def unlike
