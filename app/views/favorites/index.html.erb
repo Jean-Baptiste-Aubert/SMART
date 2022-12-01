@@ -3,7 +3,7 @@
 <div class="container">
   <h1>Mon musée personnel</h1>
     <div class = "favorites_img">
-      <% @favorites.each |favorite| do : %>
+      <%= @favorites.each |favorite| do %>
         <%= favorite.ark.image_url %>
       <% end %>
     </div>
