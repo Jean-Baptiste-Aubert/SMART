@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :arks, only: [:index, :show] do
     resources :favorites, only: [:index, :create, :destroy]
+    member do
+      get 'related_arks', to: 'arks#related_arks'
+    end
   end
 end
