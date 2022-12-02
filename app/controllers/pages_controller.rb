@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   before_action :authenticate_user!
 
   def home
-    @arks = current_user.favorites.first
+    @ark = current_user.favorites.first
   end
 end
