@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_02_102742) do
     t.bigint "artist_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "date"
+    t.string "date"
     t.string "image_url"
     t.index ["artist_id"], name: "index_arks_on_artist_id"
     t.index ["category_id"], name: "index_arks_on_category_id"
