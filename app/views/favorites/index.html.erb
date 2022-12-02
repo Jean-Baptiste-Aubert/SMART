@@ -1,10 +1,9 @@
-<img src="../assets/images/logo.svg" alt="logo"/>
 
 <div class="container">
   <h1>Mon musée personnel</h1>
     <div class = "favorites_img">
-      <% @favorites.each |favorite| do : %>
-        <%= favorite.ark.image_url %>
-      <% end %>
+      <%= @favorites.each {| favorite | favorite.ark.image_url }%>
+        <%#= favorite.ark.image_url %>
+      <%#= end %>
     </div>
 </div>

@@ -5,9 +5,15 @@ class FavoritesController < ApplicationController
   end
 
   def create
+    @ark = Ark.find(params[:ark_id])
+    @favorite = Favorite.new
     @favorite.user = current_user
     @favorite.ark = @ark
-    @favorite.save
+    if @favorite.save
+      redirect_to ark_favorites_path, notice: "Ark added to your favorites"
+    else
+      render :root
+    end
   end
 
   def destroy

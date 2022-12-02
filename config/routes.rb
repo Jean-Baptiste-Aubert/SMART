@@ -7,8 +7,9 @@ Rails.application.routes.draw do
 
   # get 'user', to: 'users#index'
   resources :users, only: [:show]
+  resources :favorites, only: [:index, :destroy]
   resources :arks, only: [:index, :show] do
-    resources :favorites, only: [:index, :create, :destroy]
+    resources :favorites, only: [:new, :create]
     member do
       get 'related_arks', to: 'arks#related_arks'
     end

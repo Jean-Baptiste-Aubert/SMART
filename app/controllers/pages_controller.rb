@@ -5,8 +5,4 @@ class PagesController < ApplicationController
   def home
     @arks = current_user.favorites.first
   end
-
-  def show
-    @ark = Ark.find(params[:id])
-  end
 end

@@ -1,33 +1,28 @@
 <div class="try">
-    <div class="bansky">
-      <div class="jour">
-          <h6>SM'ART</h6>
-            <h1>L'image du jour</h1>
-      </div>
-        <%= image_tag @ark.image_url %>
+  <div class="bansky">
+    <div class="jour">
+          <h6>SMART</h6>
+            <h1>Image du jour</h1>
     </div>
-      <div class="heart">
-        <i class="fas fa-heart"></i>
-      </div>
-        <div class="descrip">
+        <%= image_tag @ark.image_url %>
+  </div>
+    <div class="heart">
+      <%= form_with model: [@ark, Favorite.new] do |f|%>
+      <%#= f.hidden_field :ark_id, value: @ark.id %>
+      <%#= f.hidden_field :user_id, value: current_user %>
+      <%= f.submit "Ajouter à mes favoris", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+      <div class="descrip">
           <h2><%= @ark.name %></h2>
             <h5><%= @ark.artist_id %></h5>
               <p><%= @ark.description %></p>
-        </div>
+      </div>
      <div class="icons">
-      <%= current_user %>
-      <%= "----" %>
-      <%= console %>
       <% if current_user.present? %>
-        <%= puts hello %>
         <%= link_to "Profil", user_path(current_user) %>
-        <%= link_to "Portfolio", favorite_path%>
-
-      <% else %>
-        <%= "je suis là" %>
-        <%= link_to "Connexion",  new_user_registration_path %>
+        <%= link_to "Portfolio", favorites_path %>
+        <%= link_to "Connexion",  new_user_registration_url %>
       <% end %>
-        <i class="fa-solid fa-share-nodes"></i>
-
-    </div>
+  </div>
 </div>
