@@ -1,30 +1,35 @@
+<div class="logo-choose-preferences">
+  <%= image_tag("logo.svg") %>
+</div>
+
 <div class="container-choose">
+
   <h2>Quels sont tes goûts ?</h2>
   <p>faisons un peu plus connaissance...</p>
 
-  <%= simple_form_for root_path, method: :get  do |f| %>
-      <input type="checkbox" name="dates" value="1400-1499" id="1">
+    <%= form_with model: current_user, url: choosen_path, method: :post %>
+      <input type="checkbox" name="dates[quinzieme]" value="1450" id="1">
       <label for="1"><%= image_tag("15e.jpg", alt: "Tableau du 15e", class:"image-preferences")%></label>
 
-      <input type="checkbox" name="dates" value="1500-1599" id="2">
+      <input type="checkbox" name="dates[seizieme]" value="1550" id="2">
       <label for="2"><%= image_tag("16e.jpg", alt: "Tableau du 16e", class:"image-preferences")%></label>
 
-      <input type="checkbox" name="dates" value="1600-1699" id="3">
+      <input type="checkbox" name="dates[dixseptieme]" value="1650" id="3">
       <label for="3"><%= image_tag("17e.jpg", alt: "Tableau du 17e", class:"image-preferences")%></label>
 
-      <input type="checkbox" name="dates" value="1700-1799" id="4">
+      <input type="checkbox" name="dates[dixhuitieme]" value="1750" id="4">
       <label for="4"><%= image_tag("18e.jpg", alt: "Tableau du 18e", class:"image-preferences")%></label>
 
-      <input type="checkbox" name="dates" value="1800-1899" id="5">
+      <input type="checkbox" name="dates[dixneuvieme]" value="1850" id="5">
       <label for="5"><%= image_tag("19e.jpg", alt: "Tableau du 19e", class:"image-preferences")%></label>
 
-      <input type="checkbox" name="dates" value="1900-1999" id="6">
+      <input type="checkbox" name="dates[vingtieme]" value="1950" id="6">
       <label for="6"><%= image_tag("20e.jpg", alt: "Tableau du 20e", class:"image-preferences")%></label>
 
       <div>
-        <div type="button" class="btn btn-info mt-4">
-          <%= f.button :submit, "Et c'est parti..." %>
-          <% end %>
+        <div>
+        <button class="button-preferences" type="submit">Et c'est parti...</button>
         </div>
       </div>
+    </form>
 </div>

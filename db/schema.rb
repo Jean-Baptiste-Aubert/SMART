@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_30_140143) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_02_102742) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_140143) do
     t.bigint "artist_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "date"
+    t.integer "date"
     t.string "image_url"
     t.index ["artist_id"], name: "index_arks_on_artist_id"
     t.index ["category_id"], name: "index_arks_on_category_id"
@@ -46,6 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_140143) do
     t.bigint "ark_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "hidden?", default: false
     t.index ["ark_id"], name: "index_favorites_on_ark_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end

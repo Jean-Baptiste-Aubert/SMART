@@ -12,13 +12,28 @@ class UsersController < ApplicationController
     end
   end
 
+  def choosen
+    years = [1450, 1550, 1650, 1750, 1850, 1950].select do |year|
+      year if params[:dates].values.map(&:to_i).include?(year)
+    end
+
+    years.each do |year|
+      @arks = Ark.where(date: (year.to_i - 50)..(year.to_i + 50))
+    end
+
+    @arks.each do |ark|
+      Favorite.create!(ark: ark, user: current_user, hidden?: true)
+    end
+    redirect_to root_path
+  end
+
   private
+
+  def dates_params
+    params.require(:user).permit(:dates)
+  end
 
   def set_user
     @user = User.find(params[:id])
-  end
-
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 end
