@@ -7,7 +7,11 @@
         <%= image_tag @ark.image_url %>
   </div>
     <div class="heart">
-        <i class="fas fa-heart"></i>
+      <%= form_with model: [@ark, Favorite.new] do |f|%>
+      <%#= f.hidden_field :ark_id, value: @ark.id %>
+      <%#= f.hidden_field :user_id, value: current_user %>
+      <%= f.submit "Ajouter à mes favoris", class: "btn btn-primary" %>
+      <% end %>
     </div>
       <div class="descrip">
           <h2><%= @ark.name %></h2>
@@ -17,7 +21,7 @@
      <div class="icons">
       <% if current_user.present? %>
         <%= link_to "Profil", user_path(current_user) %>
-        <%=  link_to "Portfolio",    ark_favorites_url(current_user) %>
+        <%= link_to "Portfolio", favorites_path %>
         <%= link_to "Connexion",  new_user_registration_url %>
       <% end %>
   </div>
