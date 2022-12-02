@@ -19,11 +19,11 @@ class UsersController < ApplicationController
 
     years.each do |year|
       @arks = Ark.where(date: (year.to_i - 50)..(year.to_i + 50))
+      @arks.each do |ark|
+        Favorite.create!(ark: ark, user: current_user, hidden?: true)
+      end
     end
 
-    @arks.each do |ark|
-      Favorite.create!(ark: ark, user: current_user, hidden?: true)
-    end
     redirect_to root_path
   end
 
