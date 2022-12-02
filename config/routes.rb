@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get "choose_preferences", to: "users#choose"
+  post "choosen", to: "users#choosen"
 
   # get 'user', to: 'users#index'
   resources :users, only: [:show]

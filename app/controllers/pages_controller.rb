@@ -3,7 +3,6 @@ class PagesController < ApplicationController
   before_action :authenticate_user!
 
   def home
-    # daily_arks = Ark.date.include?(current_user.preference).all
-    @ark = Ark.all.sample
+    @arks = current_user.favorites.first
   end
 end

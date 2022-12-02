@@ -4,8 +4,8 @@ input[type="checkbox"] {
 }
 
 .image-preferences {
-  height: 180px;
-  width: 180px;
+  height: 150px;
+  width: 150px;
   border-radius: 8px;
   padding: 2px;
   object-fit: cover;
@@ -15,14 +15,36 @@ input[type="checkbox"]:checked + label img {
 }
 
 .container-choose {
-  margin-top: 25vh;
-  margin-left: 15vw
+  margin-top: 1rem;
 }
 
 .container-choose h2 {
   color: rgb(42, 42, 42);
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .container-choose p {
   color: rgb(42, 42, 42);
+  text-align: center;
+}
+
+.container-choose form {
+  margin-top: 3rem;
+  text-align: center
+}
+
+.button-preferences {
+  margin-top: 3rem;
+  color: #fff;
+  border:none;
+  border-radius:10px;
+  background: linear-gradient(to bottom right,#FF3152,#FF8352);
+  padding: 8px 13px;;
+
+}
+
+.logo-choose-preferences {
+  text-align: center;
+  margin-top: 3rem
 }
