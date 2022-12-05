@@ -1,0 +1,9 @@
+<div class="showfav">
+<%= image_tag @favorite.ark.image_url %>
+          <%= @favorite.ark.name %>, <br>
+          <%= @favorite.ark.artist.name %>
+          <%= @favorite.ark.description %>
+<%= link_to "Image du jour", root_path %> <br>
+<%= link_to "Mon portfolio", favorites_path %>
+<%= link_to "Toutes les arts",  related_arks_ark_path  %>
+</div>
