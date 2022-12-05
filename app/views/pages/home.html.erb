@@ -1,0 +1,28 @@
+<div class="try">
+  <div class="bansky">
+    <div class="jour">
+          <h6>SMART</h6>
+            <h1>Image du jour</h1>
+    </div>
+        <%= image_tag @ark.image_url %>
+  </div>
+    <div class="heart">
+      <%= form_with model: [@ark, Favorite.new] do |f|%>
+      <%#= f.hidden_field :ark_id, value: @ark.id %>
+      <%#= f.hidden_field :user_id, value: current_user %>
+      <%= f.submit "Ajouter à mes favoris", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+      <div class="descrip">
+          <h2><%= @ark.name %></h2>
+            <h5><%= @ark.artist_id %></h5>
+              <p><%= @ark.description %></p>
+      </div>
+     <div class="icons">
+      <% if current_user.present? %>
+        <%= link_to "Profil", user_path(current_user) %>
+        <%= link_to "Portfolio", favorites_path %>
+        <%#= link_to "Meme genre", related_arks_ark_path %>
+      <% end %>
+  </div>
+</div>
