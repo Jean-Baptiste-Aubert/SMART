@@ -17,6 +17,10 @@ class FavoritesController < ApplicationController
     end
   end
 
+  def show
+    @favorite = Favorite.find(params[:id])
+  end
+
   def destroy
     @favorite.destroy
     redirect_to :favorites

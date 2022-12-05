@@ -4,9 +4,11 @@
     <div class = "favorite_cards">
       <% @favorites.each do | favorite | %>
         <div class="favorite_card_category">
+        <%= link_to favorite_path(favorite.ark_id) do %>
           <%= image_tag favorite.ark.image_url %>
           <%= favorite.ark.name %>, <br>
           <%= favorite.ark.artist.name %>
+        <% end %>
           <%= link_to "Supprimer", favorite_path(favorite), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-link text-danger" %>
         </div>
         <% end %>
@@ -22,6 +24,6 @@
         <i class="fa-regular fa-user"></i>
       <% end %>
     <% end %>
-      <%# <%= link_to "Meme genre", related_arks_ark_path(@ark) %>
+      <%#=link_to "Retour", related_arks_ark_path %>
   </div>
 </div>
