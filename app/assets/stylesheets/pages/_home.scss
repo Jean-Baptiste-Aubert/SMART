@@ -1,24 +1,23 @@
 // Specific CSS for your home-page
-.try {
-  background-color: #EEEEEE;
+.homepage {
+  background-image: url(https://images.unsplash.com/photo-1629196214806-2fe3a64cb875?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60);
   overflow-x: hidden;
 }
-.bansky {
-  background-color: #EEEEEE;
-  overflow-x: hidden;
-}
-.bansky img {
-  width: 75%;
+
+.artday img {
+  width: 60%;
   margin: 15%;
-  box-shadow: 5px 5px 5px 5px #DDDDDD;
+  box-shadow: 5px 5px 5px 5px #5237cb;
   display: block;
   margin-bottom: 20px;
   margin-top: 0px;
+  transition: 2s;
+  justify-content: center;
 }
 
 .jour h1 {
   text-align: left;
-  color: #AAAAAA;
+  color: #3D3C42;
   font-size: 24px;
   margin-left: 110px;
   margin-top: 10px;
@@ -41,23 +40,24 @@
 }
 
 .icons {
-  font-size: 24px;
+  font-size: 35px;
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
   margin-top: 40px;
   margin-left: 50px;
-  color: #AAAAAA;
+  color: #e8dfdf;
+  text-decoration: none;
 }
 
 .heart {
-  font-size: 24px;
+  text-decoration: none;
+  font-size: 35px;
   text-align: right;
   margin-right: 100px;
   margin-bottom: 0px;
-  color: #AAAAAA;
   :hover {
-    color: #F25287;
+    color: #e83973;
   }
 }
 
@@ -76,7 +76,17 @@
   text-shadow: 10px 10px 5px 5px #696161b8;
 }
 
+.icons {
+  text-decoration: none;
+}
 
+.homefooter {
+  background-color: #bdbbc7;
+  color: #AAAAAA;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
 
 
 
