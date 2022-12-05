@@ -3,14 +3,6 @@ class PagesController < ApplicationController
   before_action :authenticate_user!
 
   def home
-    dates         = []
-    user_arks_ids = []
-    current_user.favorites.each do |favorite|
-      dates << favorite.ark.date
-      user_arks_ids << favorite.ark.id
-    end
-
-    @dates = dates.uniq
-    @ark = @dates.any? ? Ark.where(date: @dates).sample : Ark.first
+    @ark = current_user.daily_arks.first.ark
   end
 end
