@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
   # représente le portfolio
   before_action :set_favorite, only: [:destroy]
   def index
-    @favorites = current_user.favorites.includes(:ark)
+    @favorites = current_user.favorites.where(hidden?: false)
   end
 
   def create
@@ -11,7 +11,7 @@ class FavoritesController < ApplicationController
     @favorite.user = current_user
     @favorite.ark = @ark
     if @favorite.save
-      redirect_to related_arks_ark_path(@ark), notice: "Ark added to your favorites"
+      redirect_to related_arks_ark_path(@ark), notice: "Oeuvre ajoutée à vos favoris"
     else
       render :root
     end

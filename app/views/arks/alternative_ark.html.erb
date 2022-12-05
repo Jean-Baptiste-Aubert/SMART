@@ -1,0 +1,34 @@
+<div class="homepage">
+<div class="jour">
+  <h6>SMART</h6>
+</div>
+ <div class="artday">
+    <%= image_tag @alternative_ark.image_url %>
+  </div>
+ <div class="descrip">
+    <h2><%= @alternative_ark.name %></h2>
+      <h5><%= @alternative_ark.artist_id %></h5>
+      <p><%= @alternative_ark.description %></p>
+ </div>
+ <div class="homefooter">
+<div class="icons">
+  <% if current_user.present? %>
+    <%= link_to user_path(current_user) do%>
+      <i class="fa-regular fa-user"></i>
+      <% end %>
+    <%= link_to favorites_path do%>
+      <i class="fa-regular fa-folder"></i>
+      <% end %>
+    <% end %>
+    <%= form_with model: [@alternative_ark, Favorite.new], data: { conroller: "favorite" } do |f|%>
+      <%= button_tag(type: 'submit', class: 'btn') do %>
+        <div class="heart">
+        <i class="fas fa-heart" ></i>
+      </div>
+      <% end %>
+    <% end %>
+    <%= link_to alternative_ark_ark_path(@alternative_ark) do %>
+      <i class="fas fa-heart-crack"></i>
+    <% end %>
+     </div>
+  </div
