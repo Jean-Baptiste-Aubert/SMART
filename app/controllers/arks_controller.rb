@@ -27,6 +27,10 @@ class ArksController < ApplicationController
     @ark = Ark.find(params[:id])
   end
 
+  def related_arks_show
+    @ark = Ark.find(params[:id])
+  end
+
   def unlike
     @ark = Ark.rand if Ark.date.reject?(current_user.preference)
   end
