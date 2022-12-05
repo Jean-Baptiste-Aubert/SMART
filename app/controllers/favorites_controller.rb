@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
   # représente le portfolio
   def index
-    @favorites = Favorite.all
+    @favorites = current_user.favorites.includes(:ark)
   end
 
   def create
@@ -10,7 +10,7 @@ class FavoritesController < ApplicationController
     @favorite.user = current_user
     @favorite.ark = @ark
     if @favorite.save
-      redirect_to ark_favorites_path, notice: "Ark added to your favorites"
+      redirect_to related_arks_ark_path(@ark), notice: "Ark added to your favorites"
     else
       render :root
     end
