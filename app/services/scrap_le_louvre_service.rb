@@ -89,7 +89,7 @@ class ScrapLeLouvreService
 
   def get_data(paths)
     paths.each do |path|
-      url = BASE_URL + path + ".json"
+      url = "#{BASE_URL}#{path}.json"
       file = URI(url).read
       data = JSON.parse(file)
 

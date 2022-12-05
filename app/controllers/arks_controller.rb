@@ -8,7 +8,7 @@ class ArksController < ApplicationController
     @artist = @ark.artist
     @artist_arks = @artist.arks
 
-    @date = @ark.date
+   @date = @ark.date
     @arks = Ark.all
     @date_arks = []
     @arks.each do |ark|
@@ -24,7 +24,7 @@ class ArksController < ApplicationController
   end
 
   def show
-    @ark = Ark.find(params: [id])
+    @ark = Ark.find(params[:id])
   end
 
   def unlike

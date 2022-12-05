@@ -12,7 +12,7 @@ namespace :day_ark do
 
       dates = dates.uniq
       ark = dates.any? ? Ark.where(date: dates).sample : Ark.first
-      DayArk.new(user_id: user.id, ark_id: ark.id)
+      DayArk.create(user_id: user.id, ark_id: ark.id)
     end
   end
 end

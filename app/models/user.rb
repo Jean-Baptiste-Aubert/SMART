@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :favorites
   has_many :arks, through: :favorites
+  has_many :day_arks
+  has_many :daily_arks, foreign_key: "user_id", class_name: "DayArk"
 end

@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   post "choosen", to: "users#choosen"
 
   # get 'user', to: 'users#index'
-  resources :users, only: [:show]
+
+  resources :users, only: [:show, :destroy]
   resources :favorites, only: [:index, :destroy]
   resources :arks, only: [:index, :show] do
     resources :favorites, only: [:new, :create]
