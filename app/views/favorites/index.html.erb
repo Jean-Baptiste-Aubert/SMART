@@ -1,9 +1,27 @@
 
 <div class="container">
-  <h1>Mon musée personnel</h1>
-    <div class = "favorites_img">
-      <%= @favorites.each {| favorite | favorite.ark.image_url }%>
-        <%#= favorite.ark.image_url %>
-      <%#= end %>
+  <h1 class = "text-center">Mon musée personnel</h1>
+    <div class = "favorite_cards">
+      <% @favorites.each do | favorite | %>
+        <div class="favorite_card_category">
+          <%= image_tag favorite.ark.image_url %>
+          <%= favorite.ark.name %>, <br>
+          <%= favorite.ark.artist.name %>
+          <%= link_to "Supprimer", favorite_path(favorite), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-link text-danger" %>
+        </div>
+        <% end %>
     </div>
+</div>
+
+
+
+<div class="homefooter">
+  <div class="icons">
+    <% if current_user.present? %>
+      <%= link_to user_path(current_user) do%>
+        <i class="fa-regular fa-user"></i>
+      <% end %>
+    <% end %>
+      <%# <%= link_to "Meme genre", related_arks_ark_path(@ark) %>
+  </div>
 </div>

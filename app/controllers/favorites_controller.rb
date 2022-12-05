@@ -1,5 +1,6 @@
 class FavoritesController < ApplicationController
   # représente le portfolio
+  before_action :set_favorite, only: [:destroy]
   def index
     @favorites = current_user.favorites.includes(:ark)
   end
@@ -18,6 +19,7 @@ class FavoritesController < ApplicationController
 
   def destroy
     @favorite.destroy
+    redirect_to :favorites
   end
 
   def set_favorite
