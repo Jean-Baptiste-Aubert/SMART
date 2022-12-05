@@ -1,15 +1,14 @@
 class UsersController < ApplicationController
   # represente le profil de l'utilisateur
 
-  before_action :set_user, only: [:show]
+  # before_action :set_user, only: [:show]
 
   def show
     # preference = []
-    if params[:id]
-      @user = User.find(params[:id])
-    else
-      @user = current_user
-    end
+    # if params[:id]
+    #   @users = User.find(params[:id])
+    # else
+    @user = current_user
   end
 
   def choosen
@@ -24,6 +23,8 @@ class UsersController < ApplicationController
       end
     end
 
+    create_day_ark_for_new_user
+
     redirect_to root_path
   end
 
@@ -33,7 +34,20 @@ class UsersController < ApplicationController
     params.require(:user).permit(:dates)
   end
 
-  def set_user
-    @user = User.find(params[:id])
+  def create_day_ark_for_new_user
+    dates         = []
+    user_arks_ids = []
+    current_user.favorites.includes(:ark).each do |favorite|
+      dates << favorite.ark.date
+      user_arks_ids << favorite.ark.id
+    end
+
+    dates = dates.uniq
+    ark = dates.any? ? Ark.where(date: dates).sample : Ark.first
+    DayArk.create(user_id: current_user.id, ark_id: ark.id)
   end
+
+  # def set_user
+  #   @user = User.find(params[:id])
+  # end
 end

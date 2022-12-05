@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_02_102742) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_05_104653) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,6 +41,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_02_102742) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "day_arks", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "ark_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ark_id"], name: "index_day_arks_on_ark_id"
+    t.index ["user_id"], name: "index_day_arks_on_user_id"
+  end
+
   create_table "favorites", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "ark_id", null: false
@@ -67,6 +76,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_02_102742) do
 
   add_foreign_key "arks", "artists"
   add_foreign_key "arks", "categories"
+  add_foreign_key "day_arks", "arks"
+  add_foreign_key "day_arks", "users"
   add_foreign_key "favorites", "arks"
   add_foreign_key "favorites", "users"
 end
