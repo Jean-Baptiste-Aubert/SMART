@@ -1,5 +1,5 @@
 class Favorite < ApplicationRecord
-  belongs_to :user, dependent: :destroy
-  belongs_to :ark, dependent: :destroy
+  belongs_to :user
+  belongs_to :ark
   # has_many :arks
 end

@@ -8,30 +8,18 @@ class ArksController < ApplicationController
     @artist = @ark.artist
     @artist_arks = @artist.arks
 
-   @date = @ark.date
-    @arks = Ark.all
-    @date_arks = []
-    @arks.each do |ark|
-      if ark.date == @date || ark.date.to_i > @date.to_i + 30 || ark.date.to_i < @date.to_i + 30
-        @date_arks << ark
-      end
-      @date_arks
-    end
+    @date = @ark.date
+    @date_arks = Ark.where(date: (@date.to_i - 30)..(@date.to_i + 30))
   end
 
-  def daily_show
-    # @ark = Ark.new.rand if Ark.date.include?(current_user.preference)
+  def alternative_ark
+    @ark = Ark.find(params[:id])
+    @date = @ark.date
+    @arks = Ark.where.not(date: (@date.to_i - 30)..(@date.to_i + 30))
+    @alternative_ark = @arks.sample
   end
 
   def show
     @ark = Ark.find(params[:id])
-  end
-
-  def related_arks_show
-    @ark = Ark.find(params[:id])
-  end
-
-  def unlike
-    @ark = Ark.rand if Ark.date.reject?(current_user.preference)
   end
 end

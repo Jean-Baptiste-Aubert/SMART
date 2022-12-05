@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :favorites, only: [:new, :create]
     member do
       get 'related_arks', to: 'arks#related_arks'
+      get 'alternative_ark', to: 'arks#alternative_ark'
     end
   end
 end
