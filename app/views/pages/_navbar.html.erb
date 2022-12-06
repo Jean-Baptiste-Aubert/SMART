@@ -1,0 +1,10 @@
+<div class="top">
+  <% if current_user.present? %>
+    <%= link_to user_path(current_user) do%>
+      <span style="color:black"><i class="fa-regular fa-user"></i></span>
+      <% end %>
+    <%= link_to favorites_path do%>
+      <span style="color:black"><i class="fa-regular fa-folder"></i></span>
+      <% end %>
+  <% end %>
+</div>

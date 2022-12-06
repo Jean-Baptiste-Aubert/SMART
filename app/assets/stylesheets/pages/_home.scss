@@ -1,125 +1,15 @@
 // Specific CSS for your home-page
-.homepage {
-  background-image: url(https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG11c3VlbSUyMHdhbGx8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60);
-  overflow-x: hidden;
-}
-
-.artday img {
-  width: 60%;
-  margin: 15%;
-  box-shadow: 5px 5px 5px 5px #2b2a2d;
-  display: block;
-  margin-bottom: 20px;
-  margin-top: 0px;
-  transition: 2s;
-}
-
-.jour h1 {
-  text-align: left;
-  color: #3D3C42;
-  font-size: 24px;
-  margin-left: 110px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  text-decoration-line: overline;
-}
-
-.descrip p {
-  margin-left: 110px;
-  margin-right: 110px;
-}
-.descrip h2 {
-  margin-left: 110px;
-  margin-bottom: 10px;
-}
-
-.descrip h5 {
-  margin-left: 110px;
-  margin-bottom: 30px;
-}
 
 .icons {
-  font-size: 35px;
+  font-size: 24px;
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  margin-left: 50px;
   color: #e8dfdf;
-  text-decoration: none;
-}
-
-.heart {
   text-decoration: none;
   font-size: 35px;
   text-align: right;
-  margin-right: 100px;
-  margin-bottom: 0px;
-  :hover {
-    color: #e83973;
-  }
-}
-
-.site a, .para {
-  color: #696161b8;
-  text-align: right;
-  margin-right: 15px;
-  margin-top: 40px;
-}
-
-.jour h6 {
-  text-align: right;
-  margin-right: 30px;
-  color: #AAAAAA;
-  margin-top: 30px;
-  text-shadow: 10px 10px 5px 5px #696161b8;
-}
-
-.icons {
-  text-decoration: none;
-}
-
-.homefooter {
-  background-image: url(https://unsplash.com/photos/O3ofL9XSFzA);
-  color: #AAAAAA;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-
-
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  background-color: #F582A7;
+  border-radius: 50px;
+  top: 16px;
+  padding: 3px 3px;
 }
