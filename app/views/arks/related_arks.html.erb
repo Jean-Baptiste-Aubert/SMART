@@ -1,11 +1,8 @@
 <div class="related_container">
-  <div class="return_button">
-    <%= link_to :back do%>
-      <i class="fa-solid fa-arrow-left"></i>   Retour
-    <% end %>
-  </div>
   <div>
-    <h1>Dans le regard de l'artiste</h1>
+    <h1>Dans le style</h1>
+    <h2>de l'artiste</h2>
+</div>
     <div class="artist" data-controller="caroussel">
 
       <% @artist_arks.first(3).each_with_index do |artist_ark, i| %>
@@ -24,42 +21,18 @@
   </div>
   <br>
   <div>
-    <h1>Dans la même période</h1>
+  <div class="related_new_container">
+    <h1>Dans le style</h1>
+    <h2>de l'époque</h2>
       <div class = "related_cards">
       <% @date_arks.first(6).each do | date_ark | %>
-        <div class="related_card_category">
-        <%= link_to ark_path(date_ark) do %>
+        <%= link_to ark_path(date_ark), class: "related_card_category" do %>
           <%= image_tag date_ark.image_url %>
-          <%= date_ark.name %> <br>
-          <%= date_ark.artist.name %>
-        <% end %>
-        </div>
-      <% end %>
-      </div>
-  </div>
-  <br>
-  <br>
-
-  <div class="homefooter">
-    <div class="icons">
-      <% if current_user.present? %>
-        <%= link_to user_path(current_user) do%>
-          <i class="fa-regular fa-user"></i>
-        <% end %>
-        <%= link_to favorites_path do%>
-          <i class="fa-regular fa-folder"></i>
-        <% end %>
-      <% end %>
-      <%= form_with model: [@ark, Favorite.new] do |f|%>
-        <%= button_tag(type: 'submit', class: 'btn') do %>
-          <div class="heart">
-            <i class="fas fa-heart" ></i>
+          <div class="truncate">
+          <span style="color:black"><%= date_ark.name %></span> <br>
+          <span style="color:black" class= "artist_name"><%= date_ark.artist.name %></span>
           </div>
         <% end %>
       <% end %>
-      <%= link_to alternative_ark_ark_path(@ark) do %>
-        <i class="fas fa-heart-crack"></i>
-      <% end %>
-    </div>
+      </div>
   </div>
-</div>
