@@ -2,11 +2,20 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="caroussel"
 export default class extends Controller {
-  static targets = ["input"]
+  static targets = ["input", "arks"]
   connect() {
-    console.log("Hello, Stimulus!", this.inputTarget);
-    console.log(this.inputTarget.checked);
     this.inputTarget.checked = true;
-    console.log(this.inputTarget.checked);
+  }
+
+  unableLink(event) {
+    const arkId = event.currentTarget.dataset.arkId
+    if (event.currentTarget.classList.contains("active")) {
+      window.location.replace(`http://localhost:3000/arks/${arkId}`)
+    }
+    this.arksTargets.forEach(ark => {
+      ark.classList.remove("active")
+    });
+
+    event.currentTarget.classList.add("active")
   }
 }
