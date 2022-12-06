@@ -1,3 +1,21 @@
-.showuser {
-  display: list-item;
+.containerprofil {
+ background-image: url(https://media.istockphoto.com/id/1336449533/fr/photo/carte-florale-vintage-belles-fleurs-de-jardin-pivoines.jpg?b=1&s=170667a&w=0&k=20&c=lLVW5wQ9YZVpmNUrArfOIJS93DcYeX2YUhU7dKdCh7I=);
+ background-size: cover;
+ min-height: 100vh;
+ line-height: 2;
+}
+
+.profil {
+  margin: 30px;
+  a {
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+  }
+}
+
+.titleprofil {
+ padding-top: 60px;
+ padding-left: 30px;
+ color: white;
 }
