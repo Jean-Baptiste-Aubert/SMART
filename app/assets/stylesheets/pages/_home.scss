@@ -1,17 +1,42 @@
 // Specific CSS for your home-page
 
 .icons {
-  font-size: 24px;
   display: flex;
   justify-content: space-evenly;
   color: #e8dfdf;
   text-decoration: none;
-  font-size: 35px;
-  text-align: right;
-  background-color: #F582A7;
-  border-radius: 50px;
-  top: 16px;
-  padding: 3px 3px;
+  align-items: center;
+}
+
+.heart {
+  font-size: 24px;
+  text-align: center;
+  background-color: #A12568;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  padding: 1px 10px;
+}
+.heart:hover {
+  color: white;
+}
+
+.dislike {
+  font-size: 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #A12568;
+  border-radius: 6px;
+  padding: 1px 10px;
+}
+
+.dislike:hover {
+  color: #A12568;
+}
+
+button, button:focus, button:focus, button:active {
+  outline: none !important;
+  border: 0 !important;
 }
 
 .artist_name {
