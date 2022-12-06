@@ -1,3 +1,8 @@
 <div class="homepage">
+  <div class="return_button">
+    <%= link_to :back do%>
+      <i class="fa-solid fa-arrow-left"></i>   Retour
+    <% end %>
+  </div>
   <%= render "arks/content", ark: @alternative_ark  %>
-</div
+</div>

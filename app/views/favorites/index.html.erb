@@ -1,5 +1,11 @@
 
 <div class="favorite_container">
+  <div class="return_button">
+    <%= link_to :back do%>
+      <i class="fa-solid fa-arrow-left"></i>   Retour
+    <% end %>
+  </div>
+
   <h1 class = "text-center">Mon musée personnel</h1>
     <div class = "favorite_cards">
       <% @favorites.each do | favorite | %>
@@ -9,21 +15,9 @@
           <%= favorite.ark.name %>, <br>
           <%= favorite.ark.artist.name %>
         <% end %>
-          <%= link_to "Supprimer", favorite_path(favorite), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-link text-danger" %>
+        <br>
+        <%= link_to "Supprimer", favorite_path(favorite), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-outline-danger btn-sm" %>
         </div>
       <% end %>
     </div>
-</div>
-
-
-
-<%# <div class="homefooter">
-  <div class="icons">
-    <% if current_user.present? %>
-     <%#  <%# <%= link_to user_path(current_user) do%>
-        <%# <i class="fa-regular fa-user"></i>
-      <% end %>
-    <%# <% end %>
-      <%#=link_to "Retour", related_arks_ark_path %>
-  </div>
 </div>
