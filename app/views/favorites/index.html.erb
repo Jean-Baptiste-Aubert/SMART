@@ -1,9 +1,10 @@
-<div class="favorite_container">
+<div class="container">
   <div class="return_button">
     <%= link_to :back do%>
       <span style="color:black"><i class="fa-solid fa-arrow-left"></i>   Retour</span>
     <% end %>
   </div>
+  <br>
   <h1>Mon portfolio</h1>
     <div class = "favorite_cards">
       <% @favorites.each do | favorite | %>

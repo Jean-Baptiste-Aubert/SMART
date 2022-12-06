@@ -7,7 +7,9 @@
     <div class="artist_name">
         <h5><%= ark.artist.name %></h5>
     </div>
-       <p><%= ark.description %></p>
+       <% ark.description_paragraphs.each do |paragraph| %>
+          <p><%= paragraph.join %></p>
+       <% end %>
    </div>
 
     <div class="icons">

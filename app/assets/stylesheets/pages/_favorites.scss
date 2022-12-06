@@ -5,6 +5,9 @@
 .return_button {
   margin-top: 1rem;
   margin-left: 1rem;
+  a{
+    text-decoration: none;
+  }
 }
 
 .favorite_cards {
@@ -27,7 +30,9 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 2.5rem;
-
+  a{
+    text-decoration: none;
+  }
 }
 
 .truncate {
@@ -35,6 +40,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration-line: none;
 }
 
 .icons {
@@ -43,6 +49,7 @@
 
 .artist_name {
   font-style: italic;
+  text-decoration: none;
 }
 
 .favorite_container {
