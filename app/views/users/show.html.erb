@@ -1,25 +1,25 @@
-<div class="showuser container">
-  <h1 class="mt-5">Mon profil</h1>
-  <%= simple_form_for(@user) do |f| %>
-    <%= f.input :avatar, as: :file %>
-    <%= f.submit %>
-  <% end %>
+<div class="containerprofil">
+<div class="titleprofil">
+  <h1>Mon profil</h1>
+  </div>
+  <%#= simple_form_for(@user) do |f| %>
+    <%#= f.input :avatar, as: :file %>
+    <%#= f.submit %>
+  <%#end %>
 
-  <h3>Image du jour</h3>
+ <div class="profil">
   <%= link_to "Image du jour", root_path %>
-
-  <h3>Preferences</h3>
+<br>
   <%= link_to "Mes preferences", choose_preferences_path %>
-
-  <h3>Mon portfolio</h3>
+<br>
   <%= link_to "Mon portfolio", favorites_path %>
-
-  <h3>Editer mon profil</h3>
+<br>
   <%= link_to "Editer", edit_user_registration_path %>
-
-  <h3>Toutes les arts</h3>
+<br>
   <%= link_to "Toutes les arts",  related_arks_ark_path  %>
-
-  <h3>Me deconnecter</h3>
+  <br>
+  <%= link_to "Etre un artiste",  href="https://openai.com/dall-e-2/" %>
+<br>
   <%=link_to "Deconnexion", destroy_user_session_path, method: :delete  %>
+  </div>
 </div>
