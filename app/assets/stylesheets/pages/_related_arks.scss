@@ -1,41 +1,48 @@
-
 .related_cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 120px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 36px;
+  text-decoration: none;
 }
 
 
 .related_card_category {
   background-size: cover;
   background-position: center;
-  height: 20vh;
-  width: auto;
+  height: 10rem;
+  width: 10rem;
   justify-content: center;
   align-items: center;
   color: black;
   font-size: 12px;
-  font-weight: bold;
+  font-weight:lighter;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
+  text-decoration: none;
+  margin-bottom: 1rem;
 }
 
 .icons {
   text-decoration: none;
 }
 
-.homefooter {
-  background-color: #bdbbc7;
-  color: #AAAAAA;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
+.related_container {
+  margin-top: 10%;
+}
+.related_new_container {
+  margin : 0 5% 5% 5%
 }
 
-.related_container {
-  margin: 15%;
+.artist_name {
+  font-style: italic;
+}
+
+.truncate {
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 // Smallest device

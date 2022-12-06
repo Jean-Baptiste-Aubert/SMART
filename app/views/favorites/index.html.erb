@@ -1,23 +1,25 @@
-
 <div class="favorite_container">
   <div class="return_button">
     <%= link_to :back do%>
-      <i class="fa-solid fa-arrow-left"></i>   Retour
+      <span style="color:black"><i class="fa-solid fa-arrow-left"></i>   Retour</span>
     <% end %>
   </div>
-
-  <h1 class = "text-center">Mon musée personnel</h1>
+  <h1>Mon portfolio</h1>
     <div class = "favorite_cards">
       <% @favorites.each do | favorite | %>
         <div class="favorite_card_category">
-        <%= link_to favorite_path(favorite.ark_id) do %>
-          <%= image_tag favorite.ark.image_url %>
-          <%= favorite.ark.name %>, <br>
-          <%= favorite.ark.artist.name %>
-        <% end %>
-        <br>
-        <%= link_to "Supprimer", favorite_path(favorite), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-outline-danger btn-sm" %>
+          <%= link_to favorite_path(favorite.ark_id) do %>
+            <%= image_tag favorite.ark.image_url %></span>
+            <div class="truncate">
+            <span style="color:black"><%= favorite.ark.name %></span> <br>
+            <span style="color:black" class="artist_name"><%= favorite.ark.artist.name %></span>
+            </div>
+          <% end %>
+          <%= link_to favorite_path(favorite), data: { turbo_method: :delete, turbo_confirm: "Vous êtes sûr(e)?" } do %>
+            <span style="color:black"><i class="fa-solid fa-trash"></i></span>
+          <% end %>
         </div>
       <% end %>
+        </div>
     </div>
 </div>

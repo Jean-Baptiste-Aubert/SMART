@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  align-items: center;
+
 }
 // body {
 //   display: flex;
@@ -24,13 +26,15 @@ input[type=radio] {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-inputs: center;
+  align-items: center;
+
 }
 .caroussel-artists {
   position: relative;
   width: 400px;
   height: 300px;
   margin-bottom: 20px;
+  align-items: center;
 }
 .caroussel-artist {
   position: absolute;
@@ -69,4 +73,3 @@ img {
     box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
   }
 }
-
