@@ -1,7 +1,7 @@
 <div class="container">
   <div class="return_button">
     <%= link_to :back do%>
-      <span style="color:black"><i class="fa-solid fa-circle-arrow-left"></i></span>
+      <span style="color:black"><i class="fa-solid fa-circle-arrow-left fs-4"></i></span>
     <% end %>
   </div>
   <br>
@@ -17,7 +17,7 @@
             </div>
           <% end %>
           <%= link_to favorite_path(favorite), data: { turbo_method: :delete, turbo_confirm: "Vous êtes sûr(e)?" } do %>
-            <span style="color:black"><i class="fa-solid fa-trash"></i></span>
+            <span style="color:black"><i class="fa-solid fa-trash fs-6"></i></span>
           <% end %>
         </div>
       <% end %>
