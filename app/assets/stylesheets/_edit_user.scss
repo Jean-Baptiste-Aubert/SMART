@@ -1,3 +1,24 @@
-.edituser {
+.edit {
   display: list-item;
+  padding: 50px;
+    background-image: url(https://media.istockphoto.com/id/1336449533/fr/photo/carte-florale-vintage-belles-fleurs-de-jardin-pivoines.jpg?b=1&s=170667a&w=0&k=20&c=lLVW5wQ9YZVpmNUrArfOIJS93DcYeX2YUhU7dKdCh7I=);
+    background-size: cover;
+    min-height: 100vh;
+    line-height: 2;
+    a {
+      text-decoration: none;
+      font-size: 24px;
+      color: white;
+    }
+
+    h3 {
+      color: white;
+    }
+    h2 {
+      color: white;
+    }
+    .formin {
+      color: white;
+
+    }
 }
