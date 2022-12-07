@@ -1,13 +1,12 @@
- 
-<div class="showark container">
-  <h1 class="mt-5">Autre oeuvre</h1>
-
-<div class="showark">
   <div class="return_button">
     <%= link_to :back do%>
-      <i class="fa-solid fa-arrow-left"></i>   Retour
+      <i class="fa-solid fa-circle-arrow-left" style="color:black"></i>
     <% end %>
   </div>
 
+<div class="showark container">
+  <h1 class="mt-3">Dans le même style</h1>
+
+<div class="showark">
   <%= render "content", ark: @ark  %>
 </div>
