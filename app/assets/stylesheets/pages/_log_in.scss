@@ -1,8 +1,49 @@
+.log {
+  margin-left: 3rem;
+  margin-top: 15vh;
+}
+
+.logo-smart-login {
+  width: 16rem;
+}
+
 .log h2 {
-  margin-right: 110px;
+  font-family: 'Roboto', sans-serif;
+  color: #929292;
+  margin-bottom: 1rem
+}
+
+.log label {
+  color: #929292;
 }
 
 .liens-log {
-  margin-left: 110px;
   text-decoration: none;
+}
+
+.form-inputs {
+  margin-right: 3rem;
+  border-radius: 25px;
+}
+
+.emailinput {
+  border-radius: 25px;
+}
+
+.loginbtn {
+  background-color: #8ADAFF;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  width: 20rem;
+  border-radius: 25px;
+  text-align: center;
+  margin-bottom: 13rem;
+  font-size: 18px;
+  color: #929292;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #929292;
+  margin-left: 11rem;
 }
