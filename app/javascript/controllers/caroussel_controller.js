@@ -10,7 +10,7 @@ export default class extends Controller {
   unableLink(event) {
     const arkId = event.currentTarget.dataset.arkId
     if (event.currentTarget.classList.contains("active")) {
-      window.location.replace(`http://localhost:3000/arks/${arkId}`)
+      window.location.replace(`/arks/${arkId}`)
     }
     this.arksTargets.forEach(ark => {
       ark.classList.remove("active")
