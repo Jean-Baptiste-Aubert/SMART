@@ -53,7 +53,11 @@
   text-align: center;
   margin-bottom: 13rem;
   font-size: 18px;
-  color: white;
+  color: white !important;
+
+  .btn {
+    color: white !important;
+  }
 }
 
 .loginbtn:hover {
@@ -61,7 +65,11 @@
 }
 
 .sign-up {
-  text-decoration: none;
+  text-decoration: none ;
   color: white;
   margin-left: 11rem;
 }
+
+.sign-up:hover {
+  color: white;
+} 

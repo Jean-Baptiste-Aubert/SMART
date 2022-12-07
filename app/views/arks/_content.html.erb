@@ -18,7 +18,7 @@
         <span><i class="fas fa-heart-crack"></i></span>
       <% end %>
 
-        <%= link_to ark_favorites_path(ark), class: "heart" do %>
+        <%= link_to related_arks_ark_path(ark),ndata: {turbo_method: :post}, class: "heart" do %>
         <span><i class="fas fa-heart"></i></span>
         <% end %>
 
