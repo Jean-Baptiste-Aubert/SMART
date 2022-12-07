@@ -22,12 +22,24 @@
 }
 
 .dislike {
+  position: relative;
   font-size: 24px;
-
   text-decoration: none;
   color: #A12568;
+  background: #ffc0c0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  vertical-align: middle;
+  padding: 10px;
+}
 
-
+.fa-heart-crack {
+  position: absolute;
+  top: 12.5px;
+  right: 12.4px;
 }
 
 .dislike:hover {
