@@ -1,12 +1,25 @@
-.sign-up-container {
-  margin-left: 3rem;
-  margin-top: 30vh;
+.imgregistration {
+  background-image: url(https://media.istockphoto.com/id/1336449533/fr/photo/carte-florale-vintage-belles-fleurs-de-jardin-pivoines.jpg?b=1&s=170667a&w=0&k=20&c=lLVW5wQ9YZVpmNUrArfOIJS93DcYeX2YUhU7dKdCh7I=);
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  background-position: -66% 75%;
+}
+
+.signup-text {
+  background-color: white;
+  text-align: left;
+  position: fixed;
+  bottom: 0;
+  border-radius: 10px 10px 0 0;
+  padding: 2rem 2rem 4rem 2rem;
+  width: 100%;
 }
 
 .sign-up-container h2 {
   font-family: 'Roboto', sans-serif;
   color: #696969;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
 .sign-up-container label {
@@ -15,12 +28,9 @@
 
 .btnsignup-submit {
   background-color: #8ADAFF;
-  margin-right: 3rem;
   margin-top: 2rem;
-  width: 20rem;
   border-radius: 25px;
   text-align: center;
-  margin-bottom: 13rem;
   font-size: 18px;
   color: #696969;
 }

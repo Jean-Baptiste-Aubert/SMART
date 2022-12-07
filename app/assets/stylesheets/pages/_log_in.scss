@@ -1,5 +1,15 @@
+.login-container {
+  background-image: url(https://media.istockphoto.com/id/1336449533/fr/photo/carte-florale-vintage-belles-fleurs-de-jardin-pivoines.jpg?b=1&s=170667a&w=0&k=20&c=lLVW5wQ9YZVpmNUrArfOIJS93DcYeX2YUhU7dKdCh7I=);
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  background-position: center;
+  margin-top: -136px
+}
+
 .log {
-  margin-left: 3rem;
+  padding: 0 3rem;
+  box-sizing: border-box;
   margin-top: 15vh;
 }
 
@@ -7,14 +17,19 @@
   width: 16rem;
 }
 
+.logo-smart-login img {
+  margin-top: 13rem;
+  margin-bottom: 2rem;
+}
+
 .log h2 {
   font-family: 'Roboto', sans-serif;
-  color: #929292;
+  color: #f5efef;
   margin-bottom: 1rem
 }
 
 .log label {
-  color: #929292;
+  color: #f5efef;
 }
 
 .liens-log {
@@ -22,7 +37,6 @@
 }
 
 .form-inputs {
-  margin-right: 3rem;
   border-radius: 25px;
 }
 
@@ -44,6 +58,6 @@
 
 .sign-up {
   text-decoration: none;
-  color: #929292;
+  color: #f5efef;
   margin-left: 11rem;
 }
