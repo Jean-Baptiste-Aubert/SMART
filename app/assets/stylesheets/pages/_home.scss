@@ -1,8 +1,8 @@
 // Specific CSS for your home-page
 .container {
-  
   background-color: #f5f5f5;
 }
+
 .icons {
   display: flex;
   justify-content: space-evenly;
@@ -12,21 +12,26 @@
 }
 
 .heart {
-  font-size: 16px;
-  text-align: center;
-  background-color: #A12568;
-  border-radius: 6px;
+  position: relative;
+  font-size: 24px;
   text-decoration: none;
-  color: white;
-  padding: 1px 10px;
+  color: #ffc0c0;
+  background: #A12568;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
+  padding: 10px;
 }
 .heart:hover {
-  color: white;
+  color: #ffc0c0;
 }
 
 .dislike {
   position: relative;
-  font-size: 24px;
+  font-size: 27px;
   text-decoration: none;
   color: #A12568;
   background: #ffc0c0;
@@ -37,6 +42,12 @@
   line-height: 100px;
   vertical-align: middle;
   padding: 10px;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 12.5px;
+  right: 12.4px;
 }
 
 .fa-heart-crack {
