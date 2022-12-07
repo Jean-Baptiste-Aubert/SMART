@@ -24,12 +24,12 @@
 
 .log h2 {
   font-family: 'Roboto', sans-serif;
-  color: #f5efef;
+  color: white;
   margin-bottom: 1rem
 }
 
 .log label {
-  color: #f5efef;
+  color: white;
 }
 
 .liens-log {
@@ -45,7 +45,7 @@
 }
 
 .loginbtn {
-  background-color: #8ADAFF;
+  background-color: black;
   margin-right: 3rem;
   margin-top: 2rem;
   width: 20rem;
@@ -53,11 +53,15 @@
   text-align: center;
   margin-bottom: 13rem;
   font-size: 18px;
-  color: #929292;
+  color: white;
+}
+
+.loginbtn:hover {
+  color: white;
 }
 
 .sign-up {
   text-decoration: none;
-  color: #f5efef;
+  color: white;
   margin-left: 11rem;
 }
