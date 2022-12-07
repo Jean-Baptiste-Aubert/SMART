@@ -10,15 +10,15 @@
  <div class="profil">
   <%= link_to "Image du jour", root_path %>
 <br>
-  <%= link_to "Mes preferences", choose_preferences_path %>
-<br>
   <%= link_to "Mon portfolio", favorites_path %>
 <br>
-  <%= link_to "Editer", edit_user_registration_path %>
-<br>
   <%= link_to "Toutes les arts",  related_arks_ark_path  %>
-  <br>
+<br>
   <%= link_to "Etre un artiste",  href="https://openai.com/dall-e-2/" %>
+<br>
+  <%= link_to "Mes preferences", choose_preferences_path %>
+<br>
+  <%= link_to "Editer mon profil", edit_user_registration_path %>
 <br>
   <%=link_to "Deconnexion", destroy_user_session_path, method: :delete  %>
   </div>
