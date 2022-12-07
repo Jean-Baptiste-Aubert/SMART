@@ -10,7 +10,7 @@
     <div class = "favorite_cards">
       <% @favorites.each do | favorite | %>
         <div class="favorite_card_category">
-          <%= link_to favorite_path(favorite.ark_id) do %>
+          <%= link_to favorite_path(favorite) do %>
             <%= image_tag favorite.ark.image_url %></span>
             <div class="truncate">
             <span style="color:black"><%= favorite.ark.name %></span> <br>
