@@ -1,26 +1,25 @@
-.related_cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 36px;
-  text-decoration: none;
-}
+  .related_cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 12px;
+      text-decoration: none;
+  }
 
 
 .related_card_category {
   background-size: cover;
   background-position: center;
-  height: 10rem;
-  width: 10rem;
+  width: 100%;
   justify-content: center;
   align-items: center;
   color: black;
   font-size: 12px;
   font-weight:lighter;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   text-decoration: none;
-  margin-bottom: 1rem;
+  img{
+    height: 10rem;
+  }
 }
 
 .icons {
