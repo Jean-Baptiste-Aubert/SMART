@@ -9,7 +9,8 @@
   color: #e8dfdf;
   text-decoration: none;
   align-items: center;
-margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .heart {
@@ -92,4 +93,16 @@ button, button:focus, button:focus, button:active {
 
 .artist_name {
   font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.descrip a {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border-radius: 9999px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
