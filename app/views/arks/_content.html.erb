@@ -1,23 +1,22 @@
 <div class="homepage">
-   <div class="artday">
+    <div class="artday">
       <%= image_tag ark.image_url %>
     </div>
     <br>
-   <div class="descrip">
+    <div class="descrip" data-controller="collapse">
       <h2><%= ark.name %></h2>
-    <div class="artist_name">
+      <div class="artist_name">
         <h5><%= ark.artist.name %></h5>
+      </div>
+      <a data-action="click->collapse#viewCollapse" data-bs-toggle="collapse" href="#collapseExample" role="link" aria-expanded="false" aria-controls="collapseExample">
+         Voir plus
+      </a>
+      <div data-collapse-target="content" class="collapse" id="collapseExample">
+        <% ark.description_paragraphs.each do |paragraph| %>
+          <p><%= paragraph.join %></p>
+        <% end %>
+      </div>
     </div>
-       <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-         Voir infos...
-       </a>
-         <div class="collapse" id="collapseExample">
-             <% ark.description_paragraphs.each do |paragraph| %>
-                <p><%= paragraph.join %></p>
-             <% end %>
-         </div>
-
-   </div>
 
     <div class="icons">
        <%= link_to alternative_ark_ark_path(ark), class: "dislike" do %>
