@@ -19,17 +19,17 @@
     </div>
 
     <div class="icons">
-       <%= link_to alternative_ark_ark_path(ark), class: "dislike" do %>
+      <%= link_to alternative_ark_ark_path(ark), class: "dislike" do %>
         <span><i class="fas fa-heart-crack"></i></span>
       <% end %>
 
-        <%= link_to related_arks_ark_path(ark),ndata: {turbo_method: :post}, class: "heart" do %>
+      <%= link_to related_arks_ark_path(ark), class: "heart" do %>
         <span><i class="fas fa-heart"></i></span>
-        <% end %>
+      <% end %>
 
-         <%= link_to ark_favorites_path(ark), data: {turbo_method: :post}, class: "addto" do %>
+      <%= link_to ark_favorites_path(ark), data: {turbo_method: :post}, class: "addto" do %>
         <span><i class="fas fa-folder-plus"></i></span>
-        <% end %>
+      <% end %>
     </div>
 
   </div>

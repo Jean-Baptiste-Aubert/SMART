@@ -12,7 +12,7 @@
 <br>
   <%= link_to "Mon portfolio", favorites_path %>
 <br>
-  <%= link_to "Touts les arts",  related_arks_ark_path  %>
+  <%= link_to "Tous les arts",  related_arks_ark_path  %>
 <br>
   <%= link_to "Etre un artiste",  href="https://openai.com/dall-e-2/" %>
 <br>
@@ -20,6 +20,6 @@
 <br>
   <%= link_to "Editer mon profil", edit_user_registration_path %>
 <br>
-  <%= button_to "Déconnexion", destroy_user_session_path, method: :delete, data: {turbo: false} %>
+  <%= button_to "Déconnexion", destroy_user_session_path, method: :delete, data: {turbo: false}, class: "button_to" %>
   </div>
 </div>

@@ -71,3 +71,39 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+.flash {
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 4px;
+  margin: 8px;
+  animation: opacity 2s linear forwards;
+}
+
+.flash-success {
+  background: #aaebb9;
+  color: #135c15;
+}
+
+.alert.flash-success {
+bottom: unset;
+right: 16px;
+left: 16px;
+top: 16px;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  } 90% {
+    opacity: 1;
+  } 99% {
+    opacity: 0;
+  } 100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

@@ -11,7 +11,8 @@ class FavoritesController < ApplicationController
     @favorite.user = current_user
     @favorite.ark = @ark
     if @favorite.save
-      redirect_to related_arks_ark_path(@ark), notice: "Oeuvre ajoutée à vos favoris"
+      redirect_to related_arks_ark_path(@ark)
+      flash[:success] = "Oeuvre ajoutée au portfolio   "
     else
       render :root
     end
