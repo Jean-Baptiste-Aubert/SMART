@@ -20,8 +20,6 @@
 <br>
   <%= link_to "Editer mon profil", edit_user_registration_path %>
 <br>
-  <%= link_to "Déconnexion", destroy_user_session_path, data: {turbo_method: :delete} do %>
-    <%= redirect_to new_user_session_path %>
-  <% end %>
+  <%= button_to "Déconnexion", destroy_user_session_path, method: :delete, data: {turbo: false} %>
   </div>
 </div>
