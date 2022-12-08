@@ -8,9 +8,15 @@
     <div class="artist_name">
         <h5><%= ark.artist.name %></h5>
     </div>
-       <% ark.description_paragraphs.each do |paragraph| %>
-          <p><%= paragraph.join %></p>
-       <% end %>
+       <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+         Voir infos...
+       </a>
+         <div class="collapse" id="collapseExample">
+             <% ark.description_paragraphs.each do |paragraph| %>
+                <p><%= paragraph.join %></p>
+             <% end %>
+         </div>
+
    </div>
 
     <div class="icons">
