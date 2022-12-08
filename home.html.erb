@@ -21,7 +21,7 @@
         <i class="fa-regular fa-folder"></i>
         <% end %>
       <% end %>
-      <%= form_with model: [@ark, Favorite.new], data: { conroller: "favorite" } do |f|%>
+      <%= form_with model: [@ark, Favorite.new], data: { controller: "favorite" } do |f|%>
         <%= button_tag(type: 'submit', class: 'btn') do %>
           <div class="heart">
           <i class="fas fa-heart" ></i>

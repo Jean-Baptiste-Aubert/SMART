@@ -1,5 +1,13 @@
 <div class="container pt-5 pb-2 bg-dark">
-<%= render 'pages/navbar' %>
+  <%= render 'pages/navbar' %>
+  <% flash.each do |type, msg| %>
+    <div class="flash flash-<%= type %> alert alert-dismissible fade show" role="alert">
+      <span><%= msg %></span>
+      <a data-bs-dismiss="alert" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </a>
+    </div>
+  <% end %>
     <h1 style="color:white">Dans le style</h1>
     <h2 style="color:white">de l'artiste</h2>
     <div class="artist" data-controller="caroussel">
